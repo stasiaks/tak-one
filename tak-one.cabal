@@ -17,7 +17,6 @@ license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
@@ -59,4 +58,5 @@ test-suite tak-one-test
     , tak-one
     , tasty
     , tasty-hunit
+    , tasty-smallcheck
   default-language: Haskell2010
