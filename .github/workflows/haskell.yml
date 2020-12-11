@@ -31,7 +31,7 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
 
-    - name: Cabal stack
+    - name: Stack cache
       uses: actions/cache@v1
       env:
         cache-name: cache-stack
