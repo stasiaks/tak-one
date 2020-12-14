@@ -9,8 +9,6 @@ main :: IO ()
 main = getArgs >>= parse >>= print
 
 parse :: [String] -> IO Int
-parse [] = usageMessage >> exitFailure
-parse [a, b] = usageMessage >> exitFailure
 parse [a, b, c] = processArguments a b c
 parse _ = usageMessage >> exitFailure
 
