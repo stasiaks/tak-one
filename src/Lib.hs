@@ -10,7 +10,7 @@ divisionDigit :: Int -> Int -> Int -> Int
 divisionDigit a b c
     | intRes == "0" = expansionDigitDropping a b c
     | a <= length intRes = digitToInt $ intRes !! (a-1)
-    | otherwise = expansionDigit a rem c 0
+    | otherwise = expansionDigit (a-length intRes) rem c 0
     where !(i, rem) = divide b c
           !intRes = show i
 

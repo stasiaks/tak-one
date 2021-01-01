@@ -33,10 +33,16 @@ unitTests = testGroup "Unit tests"
         divisionDigit 2 71 700 @?= 0
     , testCase "71 / 700, 3. cyfra" $
         divisionDigit 3 71 700 @?= 1
+    , testCase "102 / 99, 2. cyfra" $
+        divisionDigit 2 102 99 @?= 0
+    , testCase "105 / 98, 2. cyfra" $
+        divisionDigit 2 105 98 @?= 0
+    , testCase "165 / 2, 3. cyfra" $
+        divisionDigit 3 165 2 @?= 5
     , testCase "2 / 3, 10^8. cyfra (performance check)" $
         divisionDigit (10^8) 2 3 @?= 6
     , testCase "7 / 22, 10^8. cyfra (performance check)" $
         divisionDigit (10^8) 7 22 @?= 1
     , testCase "10^5 / 10^5-1, 10^8. cyfra (performance check)" $
-        divisionDigit (10^8) (10^5) ((10^5)-1) @?= 1
+        divisionDigit (10^8) (10^5) ((10^5)-1) @?= 0
     ]
